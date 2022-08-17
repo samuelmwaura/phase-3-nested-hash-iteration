@@ -24,7 +24,7 @@ contacts.each do |person,person_details_hash|
   if person == "Freddy Mercury"    #if key == Freddie
     person_details_hash.each do |attr, prop|     #iterate in the freddie hash
     if attr == :favorite_ice_cream_flavors
-      prop.shift
+      prop.delete_if{|icre_cream| icre_cream == "strawberry"}
     end
   end
 end
