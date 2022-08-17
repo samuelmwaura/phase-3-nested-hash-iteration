@@ -19,6 +19,16 @@ end
 
 def remove_strawberry(contacts)
   # your code here!
+contacts.each do |person,person_details_hash|
+  #binding.pry
+  if person == "Freddy Mercury"    #if key == Freddie
+    person_details_hash.each do |attr, prop|     #iterate in the freddie hash
+    if attr == :favorite_ice_cream_flavors
+      prop.shift
+    end
+  end
+end
+end
 end
 
 # print the output to the terminal for inspection
